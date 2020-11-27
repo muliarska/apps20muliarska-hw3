@@ -1,8 +1,6 @@
 package ua.edu.ucu;
 
 
-import java.util.Objects;
-
 class Student {
 
     private double GPA;
