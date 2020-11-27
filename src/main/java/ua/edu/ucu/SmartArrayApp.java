@@ -1,6 +1,7 @@
 package ua.edu.ucu;
 
 import java.util.Arrays;
+
 import ua.edu.ucu.functions.MyComparator;
 import ua.edu.ucu.functions.MyFunction;
 import ua.edu.ucu.functions.MyPredicate;
@@ -8,9 +9,11 @@ import ua.edu.ucu.smartarr.*;
 
 public class SmartArrayApp {
 
+    private static final int limitGPA = 4;
+
     public static Integer[]
-            filterPositiveIntegersSortAndMultiplyBy2(Integer[] integers) {
-                
+    filterPositiveIntegersSortAndMultiplyBy2(Integer[] integers) {
+
         MyPredicate pr = new MyPredicate() {
             @Override
             public boolean test(Object t) {
@@ -50,12 +53,12 @@ public class SmartArrayApp {
     }
 
     public static String[]
-            findDistinctStudentNamesFrom2ndYearWithGPAgt4AndOrderedBySurname(Student[] students) {
+    findDistinctStudentNamesFrom2ndYearWithGPAgt4AndOrderedBySurname(Student[] students) {
         MyPredicate pr = new MyPredicate() {
             @Override
             public boolean test(Object student) {
                 Student st = (Student) student;
-                return st.getYear() == 2 && st.getGPA() >= 4;
+                return st.getYear() == 2 && st.getGPA() >= limitGPA;
             }
         };
 

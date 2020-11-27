@@ -25,8 +25,4 @@ abstract class SmartArrayDecorator implements SmartArray {
         return newArray;
     }
 
-    @Override
-    public String toString() {
-        return smartArray.toString();
-    }
 }

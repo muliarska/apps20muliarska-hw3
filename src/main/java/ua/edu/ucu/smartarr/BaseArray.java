@@ -7,12 +7,12 @@ public class BaseArray implements SmartArray {
     private Object[] data;
 
     public BaseArray(Object[] data) {
-        this.data = data;
+        this.data = data.clone();
     }
 
     @Override
     public Object[] toArray() {
-        return data;
+        return data.clone();
     }
 
     @Override
@@ -23,14 +23,5 @@ public class BaseArray implements SmartArray {
     @Override
     public int size() {
         return data.length;
-    }
-
-    @Override
-    public String toString() {
-        String res = "";
-        for(int i = 0; i<size(); i++) {
-            res += toArray()[i] + " ";
-        }
-        return res;
     }
 }

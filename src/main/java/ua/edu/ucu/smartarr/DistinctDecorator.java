@@ -15,7 +15,7 @@ public class DistinctDecorator extends SmartArrayDecorator {
         for (int i = 0; i < data.length; i++) {
 
             if (data[i] != null) {
-                for (int j = i+1; j < data.length; j++) {
+                for (int j = i + 1; j < data.length; j++) {
                     if (data[i].equals(data[j])) {
                         data[j] = null;
                         shift++;

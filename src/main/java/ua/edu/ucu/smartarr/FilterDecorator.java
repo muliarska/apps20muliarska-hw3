@@ -17,7 +17,7 @@ public class FilterDecorator extends SmartArrayDecorator {
         int shift = 0;
 
         for (int i = 0; i < size(); i++) {
-            if (! predicate.test(data[i])) {
+            if (!predicate.test(data[i])) {
                 data[i] = null;
                 shift++;
             }
