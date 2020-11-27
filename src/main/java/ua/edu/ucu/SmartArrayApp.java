@@ -9,7 +9,7 @@ import ua.edu.ucu.smartarr.*;
 
 public class SmartArrayApp {
 
-    private static final int limitGPA = 4;
+    private static final int limitGpa = 4;
 
     public static Integer[]
     filterPositiveIntegersSortAndMultiplyBy2(Integer[] integers) {
@@ -53,20 +53,21 @@ public class SmartArrayApp {
     }
 
     public static String[]
-    findDistinctStudentNamesFrom2ndYearWithGPAgt4AndOrderedBySurname(Student[] students) {
+    findDistinctStudentNamesFrom2ndYearWithGPAgt4AndOrderedBySurname
+            (Student[] students) {
         MyPredicate pr = new MyPredicate() {
             @Override
             public boolean test(Object student) {
                 Student st = (Student) student;
-                return st.getYear() == 2 && st.getGPA() >= limitGPA;
+                return st.getYear() == 2 && st.getGPA() >= limitGpa;
             }
         };
 
         MyComparator cmp = new MyComparator() {
             @Override
-            public int compare(Object student1, Object student2) {
-                Student st1 = (Student) student1;
-                Student st2 = (Student) student2;
+            public int compare(Object studentFirst, Object studentSecond) {
+                Student st1 = (Student) studentFirst;
+                Student st2 = (Student) studentSecond;
                 return st1.getSurname().compareTo(st2.getSurname());
             }
         };

@@ -30,8 +30,8 @@ public class MapDecorator extends SmartArrayDecorator {
 
     @Override
     public String operationDescription() {
-        return "This operation map every element to" +
-                " another object using MyFunction";
+        return "This operation map every element to"
+                + " another object using MyFunction";
     }
 
     @Override

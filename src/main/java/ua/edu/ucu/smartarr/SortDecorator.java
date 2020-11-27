@@ -29,8 +29,8 @@ public class SortDecorator extends SmartArrayDecorator {
 
     @Override
     public String operationDescription() {
-        return "This operation removes elements that " +
-                "do not meet the predicate conditions";
+        return "This operation removes elements that "
+                + "do not meet the predicate conditions";
     }
 
     @Override

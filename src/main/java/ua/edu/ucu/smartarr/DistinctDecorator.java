@@ -35,8 +35,8 @@ public class DistinctDecorator extends SmartArrayDecorator {
 
     @Override
     public String operationDescription() {
-        return "This operation remove duplicates " +
-                "from SmartArray";
+        return "This operation remove duplicates "
+                + "from SmartArray";
     }
 
     @Override
