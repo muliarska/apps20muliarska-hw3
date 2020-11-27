@@ -82,10 +82,10 @@ public class SmartArrayApp {
 
         SmartArray sa = new BaseArray(students);
 
+        sa = new DistinctDecorator(sa);
         sa = new FilterDecorator(sa, pr);
         sa = new SortDecorator(sa, cmp);
         sa = new MapDecorator(sa, func);
-        sa = new DistinctDecorator(sa);
 
         Object[] result = sa.toArray();
         return Arrays.copyOf(result, result.length, String[].class);

@@ -1,6 +1,8 @@
 package ua.edu.ucu;
 
 
+import java.util.Objects;
+
 class Student {
 
     private double GPA;
@@ -35,5 +37,4 @@ class Student {
     public String toString() {
         return "Student{name=" + name + ", surname=" + surname + ", " + "GPA=" + GPA + ", year=" + year + '}';
     }
-
 }
